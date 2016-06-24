@@ -1,5 +1,5 @@
 # Theano Introduction
-This introduction to Theano was part of the Concepts and Applications to Neural Networks (CANN) course at the Institute of Cognitive Science at the University of Osnabrück in the summer term 2016.
+This folder contains information to get Theano up and running on your system. Use the installation instructions below to get started.
 
 ## Theano Installation
 The installation steps for UNIX and MAC can be found on the projects homepage: [theano](http://deeplearning.net/software/theano/install.html#install), for Windows take a look here: [theanoWin](http://deeplearning.net/software/theano/install_windows.html#install-windows). There are some other dependencies that have to be fullfild before starting though:
@@ -11,7 +11,7 @@ The installation steps for UNIX and MAC can be found on the projects homepage: [
  * Blas Framework with Level 3 functionality (Theano will per default link to the Blas system that numpy uses, if you want to change that take a look at your numpy and scipy installation, for homebrew the ```--with-openblas``` flag can be added)
 * nose and nose-parameterized (those are optional but will be used to test the other installation steps):
 ```sh
-$ pip3 install nose 
+$ pip3 install nose
 $ pip3 install nose-parameterized
 ```
 

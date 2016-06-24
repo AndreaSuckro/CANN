@@ -1,5 +1,5 @@
 # Keras Introduction
-This introduction to Keras was part of the Concepts and Applications to Neural Networks (CANN) course at the Institute of Cognitive Science at the University of Osnabrück in the summer term 2016
+This folder contains materials to get started with Keras. Follow the installation instructions below to set up Keras on your machine.
 
 
 ## Keras Installation
