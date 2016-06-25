@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 def viz(data, labels, progress, accuracy, discretize=False):
     """Function visualizing training progress."""
     if not hasattr(viz, 'fig'): viz.fig = plt.figure('Result')
-    viz.fig.suptitle("{:3.2%} done with accuracy {:2.2f}"
+    viz.fig.suptitle('{:3.2%} done with accuracy {:2.4f}'
                      .format(progress, accuracy))
     labels = np.round(labels) if discretize else labels
     plt.scatter(*zip(*data), c=labels, cmap='bwr')
