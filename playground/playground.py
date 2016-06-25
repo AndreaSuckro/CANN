@@ -5,14 +5,12 @@ import matplotlib.pyplot as plt
 
 
 
-def viz(data, labels, progress, accuracy, discretize=False):
+def viz(data, labels, progress, accuracy, fig, discretize=False):
     """Function visualizing training progress."""
-    if not hasattr(viz, 'fig'): viz.fig = plt.figure('Result')
-    viz.fig.suptitle('{:3.2%} done with accuracy {:2.4f}'
-                     .format(progress, accuracy))
+    fig.suptitle('{:3.2%} done with accuracy {:2.4f}'.format(progress, accuracy))
     labels = np.round(labels) if discretize else labels
     plt.scatter(*zip(*data), c=labels, cmap='bwr')
-    viz.fig.canvas.draw()
+    fig.canvas.draw()
 
 
 class DataGenerator:
