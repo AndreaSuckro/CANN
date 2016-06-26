@@ -1,5 +1,5 @@
 .DS_Store
 env/
 */__pycache__/
-*/tensorboard/
+*/logs/
 */.ipynb_checkpoints
