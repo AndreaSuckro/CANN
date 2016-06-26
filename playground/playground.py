@@ -1,15 +1,26 @@
 import numpy as np
 from numpy.random import normal, random_sample, permutation
 from numpy.linalg import norm
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 
-
+orangeblue = LinearSegmentedColormap('OrangeBlue', {
+    'red':   ((0.0,  1.0, 1.0),
+              (0.5,  1.0, 1.0),
+              (1.0,  0.0, 0.0)),
+    'green': ((0.0,  0.5, 0.5),
+              (0.5,  1.0, 1.0),
+              (1.0,  0.0, 0.0)),
+    'blue':  ((0.0,  0.0, 0.0),
+              (0.5,  1.0, 1.0),
+              (1.0,  1.0, 1.0))
+})
 
 def viz(data, labels, progress, accuracy, fig, discretize=False):
     """Function visualizing training progress."""
     fig.suptitle('{:3.2%} done with accuracy {:2.4f}'.format(progress, accuracy))
     labels = np.round(labels) if discretize else labels
-    plt.scatter(*zip(*data), c=labels, cmap='bwr')
+    plt.scatter(*zip(*data), c=labels, cmap=orangeblue)
     fig.canvas.draw()
 
 
